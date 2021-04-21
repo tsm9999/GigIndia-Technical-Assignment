@@ -1,9 +1,9 @@
 # GigIndia-Technical-Assignment
 Video and Audio Sentiment Analyzer
 
-## INtroduction
+## Introduction
 
-This is amultimodal emotion alanlysis platform to analyze emotions either by uploading a video or an audio file.
+This is a multimodal emotion alanlysis platform to analyze emotions either by uploading a video or an audio file.
 
 
 
