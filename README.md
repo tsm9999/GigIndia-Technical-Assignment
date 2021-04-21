@@ -75,7 +75,7 @@ The speech emotion recognition pipeline was built the following way :
 # Resources Used
 
 - https://github.com/speechbrain/speechbrain/
-- https://github.com/kousik97/Video-Expression-Recognition
-- https://github.com/Nirmalvekariya/Video-Sentiment-Analysis
 - https://github.com/ankurbhatia24/MULTIMODAL-EMOTION-RECOGNITION
-- ....
+- https://github.com/maelfabien/Multimodal-Emotion-Recognition
+- https://github.com/kousik97/Video-Expression-Recognition
+- etc..
