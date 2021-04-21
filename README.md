@@ -1,5 +1,5 @@
-# GigIndia-Technical-Assignment
-Video and Audio Sentiment Analyzer
+# Video and Audio Sentiment Analyzer
+ GigIndia Technical Assignment
 
 ## Introduction
 
