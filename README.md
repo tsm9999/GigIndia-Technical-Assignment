@@ -41,8 +41,8 @@ The aim of the assignment was to develop a model able to provide sentiment analy
 
 ### a. Video Analysis
 
-1. ![image](/Screenshots/video_analysis.png)
+1. <img src="https://github.com/tsm9999/Video-and-Audio-Sentiment-Analyzer/blob/main/Screenshots/video_analysis.png" width="1000" height="800">
 <br>
 <br>
-2. <img src="https://github.com/tsm9999/Video-and-Audio-Sentiment-Analyzer/blob/main/Screenshots/video_dashboard.png" width="1000" height="500">
+2. <img src="https://github.com/tsm9999/Video-and-Audio-Sentiment-Analyzer/blob/main/Screenshots/video_dashboard.png" width="1000" height="800">
 4. <br>
