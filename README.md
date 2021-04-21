@@ -30,7 +30,11 @@ WebApp --> `pip3 install requirements.txt` --> `python3 main.py`
     |
     ├── Video 
     |
-    ├── Screenshots 
+    ├── Screenshots
+    |
+    ├── Video Input Samples
+    |
+    ├── Audio Input Samples
     |
     └── ... 
     .
