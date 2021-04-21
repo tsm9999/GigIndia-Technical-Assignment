@@ -17,7 +17,7 @@ WebApp --> `pip3 install -r requirements.txt` --> `python3 main.py`
     Video and Audio Sentiment Analyzer
     ├── ...
     ├── WebApp                    
-    │   ├── templates		# html                 
+    │   ├── templates		 # html                 
     │   ├── library				# video and audio sentiment analysis functions
     |   │   ├── speech_emotion_recognition.py
     |   │   ├── video_emotion_recognition.py
