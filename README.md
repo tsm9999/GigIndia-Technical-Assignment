@@ -13,10 +13,10 @@ WebApp --> `pip3 install requirements.txt` --> `python3 main.py`
 
 # Directory Structure
 
-Video and Audio Sentiment Analyzer
-|
-+-- Audio
-|
+Video and Audio Sentiment Analyzer <br>
+|    <br>
++-- Audio  <br>
+|  <br>
 +-- Video
 |
 +-- Models
