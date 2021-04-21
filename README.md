@@ -7,6 +7,12 @@ This is a multimodal emotion alanlysis platform to analyze emotions either by up
 
 ![alt text](https://github.com/tsm9999/GigIndia-Technical-Assignment/blob/main/Screenshots/index.png)
 
-The tool can be accessed from the WebApp repository, by installing the requirements.txt and running `main.py`.
+# How to run?
+
+## Running on local machine:
+
+WebApp --> `pip3 install requirements.txt` --> `python3 main.py`
+
+#Directory Structure
 
 
