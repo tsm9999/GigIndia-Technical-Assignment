@@ -35,4 +35,13 @@ WebApp --> `pip3 install requirements.txt` --> `python3 main.py`
     └── ... 
     .
     
-# hello
+# Methodology
+
+The aim of the assignment was to develop a model able to provide sentiment analysis fro video and audio files.
+
+### a. Video Analysis
+
+1. ![image](/Screenshots/video_analysis.png)
+<br>
+<br>
+2. ![image](/Screenshots/video_dashboard.png)
