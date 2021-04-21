@@ -9,10 +9,30 @@ This is a multimodal emotion alanlysis platform to analyze emotions either by up
 
 # How to run?
 
-## Running on local machine:
-
 WebApp --> `pip3 install requirements.txt` --> `python3 main.py`
 
-#Directory Structure
+# Directory Structure
+
+Video and Audio Sentiment Analyzer
+|
++-- Audio
+|
++-- Video
+|
++-- Models
+|
++-- WebApp
+|  |
+|  +-- templates
+|  +-- library
+|  |  |
+|  |  +-- speech_emotion_recognition.py
+|  |  +-- video_emotion_recognition.py
+|  |
+|  +-- static
+|  +-- main.py
+|  +-- requirements.txt
+|
++-- Screenshots
 
 
