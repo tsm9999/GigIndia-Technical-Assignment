@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css" />
+    <script type="text/javascript" src="/static/js/d3/d3.js"></script>
+    <script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>Video Dashboard</title>
+</head>
+
+  <body>
+    {% block body %}
+
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-4" style="width: 100%">
+            <div class="row justify-content-center mb-4" style="width: 100%">
+                <img src="/static/CSS/images/gigindia.png" width="20%" style="padding: 10px" />
+            </div>
+            <div class="row justify-content-center mb-4" style="width: 100%">
+                <hr style="width: 50%" />
+            </div>
+
+            <div class="row justify-content-center mb-3" style="width: 100%">
+                <h2>Perceived Video Sentiment</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <canvas id="emotionBarChart"></canvas>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="row justify-content-center">
+                        <div class="row justify-content-center mb-3" style="width: 100%">
+                            <h4>Facial Emotions</h4>
+                        </div>
+
+                        <div class="row justify-content-center mb-3" style="width: 100%">
+                            <big>Your most frequent emotion is<b style="font-size: 1.3rem"> {{emo}}</b></big>
+                        </div>
+
+              <div class="row justify-content-center" style="width: 80%">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Emotion</th>
+                      <th scope="col">Probability</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Anger</td>
+                      <td>{{prob[0]}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Disgust</td>
+                      <td>{{prob[1]}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Fear</td>
+                      <td>{{prob[2]}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Happy</td>
+                      <td>{{prob[3]}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Sad</td>
+                      <td>{{prob[4]}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Surprise</td>
+                      <td>{{prob[5]}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">7</th>
+                      <td>Neutral</td>
+                      <td>{{prob[6]}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center m-5" style="width: 100%">
+          <hr style="width: 50%" />
+        </div>
+
+        <div class="row justify-content-center mt-4" style="width: 100%">
+          <canvas id="emotionLineChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      d3.text("/static/js/db/prob.csv", function (dataxx) {
+        dataxx = d3.csvParseRows(dataxx);
+        var labels = [];
+        var datasets = [
+          {
+            label: "Angry)",
+            data: [],
+            tension: 0.1,
+            fill: false,
+            borderColor: "red",
+          },
+          {
+            label: "Disgust",
+            data: [],
+            tension: 0.1,
+            fill: false,
+            borderColor: "blue",
+          },
+          {
+            label: "Fear",
+            data: [],
+            tension: 0.1,
+            fill: false,
+            borderColor: "yellow",
+          },
+          {
+            label: "Happy",
+            data: [],
+            tension: 0.1,
+            fill: false,
+            borderColor: "green",
+          },
+          {
+            label: "Sad",
+            data: [],
+            tension: 0.1,
+            fill: false,
+            borderColor: "black",
+          },
+          {
+            label: "Surprise",
+            data: [],
+            tension: 0.1,
+            fill: false,
+            borderColor: "orange",
+          },
+          {
+            label: "Neutral",
+            data: [],
+            tension: 0.1,
+            fill: false,
+            borderColor: "purple",
+          },
+        ];
+
+        for (var i = 0; i < dataxx.length; i++) {
+          labels.push(i + 1);
+          for (var j = 0; j < 7; j++) {
+            datasets[j]["data"].push(dataxx[i][j]);
+          }
+        }
+        console.log(dataxx);
+
+        const config = {
+          type: "line",
+          data: {
+            labels: labels,
+            datasets: datasets,
+          },
+          options: {
+            maintainAspectRatio: false,
+            scales: {
+              yAxes: [
+                {
+                  scaleLabel: {
+                    display: true,
+                    labelString: "Probability",
+                  },
+                },
+              ],
+            },
+          },
+        };
+
+        var ctx = document.getElementById("emotionLineChart").getContext("2d");
+        ctx.canvas.parentNode.style.width = "80%";
+        ctx.canvas.parentNode.style.height = "50vh";
+        var myChart = new Chart(ctx, config);
+      });
+    </script>
+
+    <script>
+      var ctx = document.getElementById('emotionBarChart').getContext('2d');
+      ctx.canvas.parentNode.style.width = "100%";
+      ctx.canvas.parentNode.style.height = "100%";
+      var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral'],
+              datasets: [{
+                  label: '# of Votes',
+                  data: [{{prob[0]}}, {{prob[1]}}, {{prob[2]}}, {{prob[3]}}, {{prob[4]}}, {{prob[5]}},{{prob[6]}}],
+
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+
+              responsive: true,
+              maintainAspectRatio: true
+          }
+      });
+    </script>
+
+    {% endblock %}
+  </body>
+</html>

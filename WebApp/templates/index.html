@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+
+    <title>GigIndia Assignment</title>
+
+    
+
+  </head>
+  <body>
+
+
+  
+    <a href="/">
+      <img src = "/static/CSS/images/gigindia.png" width="20%" style="padding: 30px">
+    </a>
+    <br>
+
+
+ {% block body %}
+
+  <!--
+  Video Interview presentation
+  -->
+  <div class="row">
+
+
+
+      <div class="column" id="left-col" style="padding: 30px">
+        <img src = "/static/CSS/images/video.png" width="55%">
+        <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+          <p> Use the video interview simulator to see how it interprets your facial emotions.</p>
+          <br>
+          <p> You will be provided a feedback on your facial emotions such as :
+          <ul>
+            <li>Anger</li>
+            <li>Happiness</li>
+            <li>Fear</li>
+            <li>Sadness</li>
+            <li>Surprise</li>
+            <li>Disgust</li>
+          </ul>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <!--
+      Audio Interview presentation
+      -->
+      <div class="column" id="left-col" style="padding: 30px">
+        <img src = "/static/CSS/images/audio.png" width="30%">
+        <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+          <p> Use the video interview simulator to see how it interprets your vocal emotions.</p>
+          <br>
+          <p> You will be provided a feedback on your vocal emotions such as :
+          <ul>
+            <li>Anger</li>
+            <li>Happiness</li>
+            <li>Fear</li>
+            <li>Sadness</li>
+            <li>Surprise</li>
+            <li>Disgust</li>
+          </ul>
+          <br>
+          <br>
+        </div>
+      </div>
+
+  </div>
+
+  
+
+
+  <div class="row">
+    <!--
+    Video Interview button
+    -->
+     <div class="column" id="left-col" style="padding: 30px">
+
+
+         <form method="POST" action="/upload_video" enctype="multipart/form-data" >
+            <p><input type="file" name="file"></p>
+            <br><br>
+            <p><input type="submit" value="Submit"></p>
+          </form>
+          <br>
+          <br>
+                                                                                                                                                                                  
+                                                                                                                                                                    
+          
+     </div>
+
+
+
+     <!--
+     Audio Interview button
+     -->
+     <div class="column" id="left-col" style="padding: 30px">
+         
+
+       	<form method="POST" action="/audio_dash" enctype="multipart/form-data" >
+        <p><input type="file" name="file"></p>
+        <br><br>
+        <input type="submit" name="audio_index" value="Submit Audio" align="center">
+        </form>
+
+     </div>
+
+
+</div>
+
+
+
+    {% endblock %}
+
+    
+  </body>
+</html>

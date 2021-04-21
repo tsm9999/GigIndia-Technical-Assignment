@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Video Interview Analysis</title>
+    <style>
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #EA1821;
+        border-radius: 6px;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Video Interview Analysis</h1>
+    <img src="{{ url_for('video_1') }}?file={{ file }}">
+
+    <a class = "button" href = "{{ url_for('video_dash') }}"> Go to Dashboard</a>
+
+  </body>
+</html>
