@@ -46,7 +46,9 @@ The aim of the assignment was to develop a model able to provide sentiment analy
 <br>
 2. Video Sentiment Dashboard<img src="https://github.com/tsm9999/Video-and-Audio-Sentiment-Analyzer/blob/main/Screenshots/video_dashboard.png" width="1000" height="800">
 <br>
-#### Pipeline
+
+#### Video Pipeline
+
 The video processing pipeline was built the following way :
 - Upload video file.
 - Identify the face by Histogram of Oriented Gradients.
@@ -61,7 +63,7 @@ The video processing pipeline was built the following way :
 1. Audio Sentiment Dashboard <img src="https://github.com/tsm9999/Video-and-Audio-Sentiment-Analyzer/blob/main/Screenshots/audio_dashboard.png" width="1000" height="500">
  <br>
 
-#### Pipeline
+#### Audio Pipeline
 
 The speech emotion recognition pipeline was built the following way :
 - Upload audio .wav file
