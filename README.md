@@ -38,11 +38,23 @@ Video and Audio Sentiment Analyzer <br>
 
 
     .
+    Video and Audio Sentiment Analyzer
     ├── ...
-    ├── docs                    # Documentation files (alternatively `doc`)
-    │   ├── TOC.md              # Table of contents
-    │   ├── faq.md              # Frequently asked questions
-    │   ├── misc.md             # Miscellaneous information
-    │   ├── usage.md            # Getting started guide
-    │   └── ...                 # etc.
-    └── ...
+    ├── WebApp                    
+    │   ├── templates              
+    │   ├── library
+    |   │   ├── speech_emotion_recognition.py
+    |   │   ├── video_emotion_recognition.py
+    |   |   └── ...  
+    │   ├── static             
+    │   ├── main.py
+    │   ├── requirements.txt
+    |   └── ...  
+    ├── Audio 
+    |
+    ├── Video 
+    |
+    ├── Screenshots 
+    |
+    └── ... 
+    .
