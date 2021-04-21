@@ -73,7 +73,7 @@ The speech emotion recognition pipeline was built the following way :
 - Upload audio .wav file
 - Log-mel-spectrogram extraction
 - Split spectrogram using a rolling window
-- Make a prediction using our pre-trained model
+- Make a prediction using a pre-trained model
 
 
 # Resources Used
