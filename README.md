@@ -17,22 +17,22 @@ Video and Audio Sentiment Analyzer <br>
 |    <br>
 +-- Audio  <br>
 |  <br>
-+-- Video
-|
-+-- Models
-|
-+-- WebApp
-|  |
-|  +-- templates
-|  +-- library
-|  |  |
-|  |  +-- speech_emotion_recognition.py
-|  |  +-- video_emotion_recognition.py
-|  |
-|  +-- static
-|  +-- main.py
-|  +-- requirements.txt
-|
-+-- Screenshots
++-- Video<br>
+|<br>
++-- Models<br>
+|<br>
++-- WebApp<br>
+|  |<br>
+|  +-- templates<br>
+|  +-- library<br>
+|  |  |<br>
+|  |  +-- speech_emotion_recognition.py<br>
+|  |  +-- video_emotion_recognition.py<br>
+|  |<br>
+|  +-- static<br>
+|  +-- main.py<br>
+|  +-- requirements.txt<br>
+|<br>
++-- Screenshots<br>
 
 
