@@ -9,7 +9,7 @@ This is a multimodal emotion analysis platform to analyze emotions either by upl
 
 # How to run?
 
-WebApp --> `pip3 install requirements.txt` --> `python3 main.py`
+WebApp --> `pip3 install -r requirements.txt` --> `python3 main.py`
 
 # Directory Structure
 
