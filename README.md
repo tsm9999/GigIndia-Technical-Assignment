@@ -41,9 +41,30 @@ The aim of the assignment was to develop a model able to provide sentiment analy
 
 ### a. Video Analysis
 <br>
-<br>
 1. Video Analysis<img src="https://github.com/tsm9999/Video-and-Audio-Sentiment-Analyzer/blob/main/Screenshots/video_analysis.png" width="1000" height="500">
 <br>
 <br>
 2. Video Sentiment Dashboard<img src="https://github.com/tsm9999/Video-and-Audio-Sentiment-Analyzer/blob/main/Screenshots/video_dashboard.png" width="1000" height="800">
+<br>
+#### Pipeline
+The video processing pipeline was built the following way :
+- Upload video file.
+- Identify the face by Histogram of Oriented Gradients.
+- Zoom on the faces.
+- Dimension the face to 48 * 48 pixels.
+- Make a prediction on the face using our pre-trained model.
+- Also identify the number of blinks on the facial landmarks on each picture.
 
+
+### b. Audio Analysis
+<br>
+1. Audio Sentiment Dashboard <img src="https://github.com/tsm9999/Video-and-Audio-Sentiment-Analyzer/blob/main/Screenshots/audio_dashboard.png" width="1000" height="500">
+ <br>
+
+#### Pipeline
+
+The speech emotion recognition pipeline was built the following way :
+- Upload audio .wav file
+- Log-mel-spectrogram extraction
+- Split spectrogram using a rolling window
+- Make a prediction using our pre-trained model
