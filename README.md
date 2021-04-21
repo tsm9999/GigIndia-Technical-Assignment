@@ -22,9 +22,9 @@ Video and Audio Sentiment Analyzer <br>
 |── Models<br>
 |<br>
 |── WebApp<br>
-|      |<br>
-|      |── templates<br>
-|  |── library<br>
+|  |<br>
+|  *|── templates<br>
+|  *|── library<br>
 |  |  |<br>
 |  |  |── speech_emotion_recognition.py<br>
 |  |  |── video_emotion_recognition.py<br>
