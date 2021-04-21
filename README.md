@@ -45,3 +45,4 @@ The aim of the assignment was to develop a model able to provide sentiment analy
 <br>
 <br>
 2. ![image](/Screenshots/video_dashboard.png)
+3. <br>
